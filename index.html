@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tg">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@India_Best_Bot - Signals</title>
+    <title>@tjs_robot - Сигналҳо</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
     <style>
         * {
@@ -131,7 +131,7 @@
         }
 
         .game-option.recommended::after {
-            content: "★ Recommended - More Money!";
+            content: "★ Тавсия мешавад - Пули бештар!";
             display: block;
             font-size: 0.9rem;
             color: #1a1a2e;
@@ -323,29 +323,29 @@
     <div class="container">
         <!-- Главное меню -->
         <div class="section active" id="menu">
-            <h1>@India_Best_Bot</h1>
-            <div class="game-option recommended" onclick="showSection('mines')">Mines</div>
-            <div class="game-option" onclick="showSection('aviator')">Aviator</div>
-            <a href="https://t.me/India_Best_Bot" class="telegram-link" target="_blank">Join @India_Best_Bot</a>
+            <h1>@tjs_robot</h1>
+            <div class="game-option recommended" onclick="showSection('mines')">Минаҳо</div>
+            <div class="game-option" onclick="showSection('aviator')">Авиатор</div>
+            <a href="https://t.me/+7hbntLJ9T9o5Nzgy" class="telegram-link" target="_blank">Ба @tjs_robot ҳамроҳ шавед</a>
         </div>
 
         <!-- Mines -->
         <div class="section" id="mines">
-            <h1>Mines</h1>
+            <h1>Минаҳо</h1>
             <div class="mines-grid" id="minesGrid"></div>
-            <button class="signal-btn" id="minesSignalBtn">SIGNAL</button>
-            <button class="back-btn" onclick="showSection('menu')">Back to Menu</button>
-            <a href="https://t.me/India_Best_Bot" class="telegram-link" target="_blank">Get More on @India_Best_Bot</a>
+            <button class="signal-btn" id="minesSignalBtn">СИГНАЛ</button>
+            <button class="back-btn" onclick="showSection('menu')">Бозгашт ба меню</button>
+            <a href="https://t.me/+7hbntLJ9T9o5Nzgy" class="telegram-link" target="_blank">Бештар дар @tjs_robot</a>
         </div>
 
         <!-- Aviator -->
         <div class="section" id="aviator">
-            <h1>Aviator</h1>
+            <h1>Авиатор</h1>
             <div class="aviator-logo"></div>
-            <div class="aviator-signal" id="aviatorSignal">Press SIGNAL to start!</div>
-            <button class="signal-btn" id="aviatorSignalBtn">SIGNAL</button>
-            <button class="back-btn" onclick="showSection('menu')">Back to Menu</button>
-            <a href="https://t.me/India_Best_Bot" class="telegram-link" target="_blank">Get More on @India_Best_Bot</a>
+            <div class="aviator-signal" id="aviatorSignal">Барои оғоз СИГНАЛ-ро пахш кунед!</div>
+            <button class="signal-btn" id="aviatorSignalBtn">СИГНАЛ</button>
+            <button class="back-btn" onclick="showSection('menu')">Бозгашт ба меню</button>
+            <a href="https://t.me/+7hbntLJ9T9o5Nzgy" class="telegram-link" target="_blank">Бештар дар @tjs_robot</a>
         </div>
     </div>
 
@@ -379,7 +379,7 @@
         function resetSignals() {
             const cells = document.querySelectorAll('.mines-cell');
             cells.forEach(cell => cell.classList.remove('revealed'));
-            document.getElementById('aviatorSignal').textContent = "Press SIGNAL to start!";
+            document.getElementById('aviatorSignal').textContent = "Барои оғоз СИГНАЛ-ро пахш кунед!";
         }
 
         // Проверка URL при загрузке
@@ -398,14 +398,14 @@
             btn.classList.add('disabled');
             btn.disabled = true;
             let timeLeft = 5; // 5 секунд
-            btn.textContent = `WAIT ${timeLeft}s`;
+            btn.textContent = `ИНТИЗОР ШАВЕД ${timeLeft}с`;
 
             const countdown = setInterval(() => {
                 timeLeft--;
-                btn.textContent = `WAIT ${timeLeft}s`;
+                btn.textContent = `ИНТИЗОР ШАВЕД ${timeLeft}с`;
                 if (timeLeft <= 0) {
                     clearInterval(countdown);
-                    btn.textContent = "SIGNAL";
+                    btn.textContent = "СИГНАЛ";
                     btn.classList.remove('disabled');
                     btn.disabled = false;
                 }
@@ -444,7 +444,7 @@
             const min = 1.5;
             const max = 3.5;
             const signal = (Math.random() * (max - min) + min).toFixed(2); // Реалистичный x1.5-x3.5
-            document.getElementById('aviatorSignal').textContent = `Crash at x${signal}`;
+            document.getElementById('aviatorSignal').textContent = `Қатъ мешавад дар x${signal}`;
             setTimeout(() => aviatorCooldown = false, 5000); // Сброс кулдауна
         };
     </script>
